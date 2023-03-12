@@ -3,6 +3,7 @@
 
 You can use this function to auto handel delete data with pop up confirmation from sweetalert2
 > Method name : ajaxDelete(url, id,reload = false,typeNotification = 'sweetSuccess', table = null, confirmSweetDelete = null)
+
 > Note : only method post not use method get right
 
 ### Available more type notification success
