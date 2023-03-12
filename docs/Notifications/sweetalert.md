@@ -1,0 +1,69 @@
+# Sweetalert2
+![sweetalert](http://sweetalert2.github.io/images/sweetalert2-social.png)
+## Sweetalert Success
+
+> Method Name : sweetSuccess(message, url = null, confirmSweetFinish = null, reload = false)
+
+### Parameter
+- message (string) => message success
+- url (string) => url to enable sweet confirmation finish
+- confirmSweetFinish (json) => custom confirmation finish message
+- reload (boolean) => if true can reload page
+
+### How to Call
+- Basic
+```javascript
+ sweetSuccess('hallo')
+```
+[View result](https://rashicode.com/wp-content/uploads/2022/04/Success.png)
+- Notification with confirmation finish
+```javascript
+ sweetSuccess('hallo', 'https://domain.com')
+```
+[View result](https://mineart.in/storage/cover/2021/07/08/uZoQWpouJXpJCTDfk9sxjm2Kc59hDA1kgWsWaSYS.png)
+
+- Notification with custom confirmation finish message
+
+> Character "?" will replace with buttonLabel
+
+
+```javascript
+const confirmSweetFinish= {
+    text : "Click the ? button to return to the previous page",
+    cancelButtonFirst : "Continue",
+    cancelButtonSecond : "Edit",
+    buttonLabel : "Done",
+    buttonConfirmColor : "#6c5ce7",
+}
+```
+
+```javascript
+ sweetSuccess('hallo', 'https://domain.com', confirmSweetFinish)
+```
+- Notification With Reload Page
+```javascript
+ sweetSuccess('hallo', 'https://domain.com', null, true)
+```
+## Sweetalert Error
+> Method Name : sweetError(message)
+
+### Parameter
+- message (string)
+
+### How to Call
+```javascript
+sweetError('hallo')
+```
+[View Result](data:image/png;base64,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)
+
+## Sweetalert Info
+> Method Name : sweetInfo(message)
+
+### Parameter
+- message (string)
+
+### How to call
+```javascript
+sweetInfo('hallo')
+```
+[View Result](https://dirask.com/static/bucket/1575714271551-VWLD0vZQEM--JavaScript%20-%20beautiful%20html%20alerts%20with%20Sweet%20Alert%202%20-%20full%20code%20examples%20-%20info%20message.png)
